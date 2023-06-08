@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Відправлення адреси e-mail</title>
+    <meta charset="UTF-8">
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Відправлення адреси e-mail</h1>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label for="email">Адреса e-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Тема:</label>
+        <input type="text" id="subject" name="subject"><br><br>
+
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Відправити">
+        <input type="reset" value="Скасувати">
+    </form>
+    <button onclick="Завдання1()">Завдання1</button>
+</body>
+</html>

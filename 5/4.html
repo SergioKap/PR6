@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Обчислення суми чисел</title>
+    <meta charset="UTF-8">
+    <script>
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById("number1").value);
+            var num2 = parseFloat(document.getElementById("number2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Будь ласка, введіть числа");
+            } else {
+                var sum = num1 + num2;
+                document.getElementById("result").value = sum;
+                
+            }
+        }
+    </script>
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Обчислення суми двох чисел</h1>
+    <form>
+        <label for="number1">Перше число:</label>
+        <input type="text" id="number1"><br><br>
+
+        <label for="number2">Друге число:</label>
+        <input type="text" id="number2"><br><br>
+
+        <input type="button" value="Обчислити суму" onclick="calculateSum()"><br><br>
+
+        <label for="result">Результат:</label>
+        <input type="text" id="result">
+    </form>
+    <button onclick="Завдання1()">Завдання1</button>
+</body>
+</html>

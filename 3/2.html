@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестування для учнів початкових класів</title>
+    <script>
+        function Завдання1() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Тестування для учнів початкових класів</h1>
+    <form>
+        <p>Питання: Хто сказав му-му?</p>
+        <select id="answerList" onchange="checkAnswer()">
+            <option value="">Оберіть відповідь</option>
+            <option value="option1">Кіт</option>
+            <option value="option2">Пес</option>
+            <option value="option3">Корова</option>
+        </select>
+        <br><br>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function checkAnswer() {
+            var selectedOption = document.getElementById("answerList").value;
+            var result = document.getElementById("result");
+
+            if (selectedOption === "option3") {
+                result.textContent = "Відповідь правильна!";
+            } else {
+                result.textContent = "Відповідь неправильна. Спробуйте ще раз.";
+            }
+        }
+    </script>
+    <button onclick="Завдання1()">Завдання1</button>
+</body>
+</html>
